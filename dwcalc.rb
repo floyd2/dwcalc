@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 #
-# just a little tool to calculate the needed time of the download of a file
+# just a little tool to calculate the needed time to download a file by giving the size of the file
+# and the bandwith
 #
-
-require "optparse"
 
 
 cmd = ARGV
@@ -22,6 +21,8 @@ def bandwith_to_byte(bandwith)
     quo = 2
   when "G"
     quo = 3
+  when "T"
+    quo = 4
   when "B"
     return bandwith.gsub(bandwith[-1], "").to_f
   end
@@ -42,6 +43,8 @@ def download_size_to_byte(dwsize)
     quo = 2
   when "G"
     quo = 3
+  when "T"
+    quo = 4
   when "B"
     return dwsize.gsub(dwsize[-1], "").to_f
   end
