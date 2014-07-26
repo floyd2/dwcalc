@@ -1,3 +1,7 @@
+Usage:
+
+./dwcalc [bandwith] [download size]
+
 Example:
 
  % ./dwcalc.rb 5M 160G  
